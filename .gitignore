@@ -1,0 +1,31 @@
+# VS / .NET
+.vs/
+*.user
+*.suo
+*.userprefs
+*.cache
+*.log
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+[Tt]est[Rr]esult*/
+Debug/
+Release/
+
+# NuGet
+packages/
+*.nupkg
+project.lock.json
+artifacts/
+
+# Rider/JetBrains (gdybyś używał)
+.idea/
+*.iml
+
+# Publikacje
+publish/
+
+# System
+Thumbs.db
+.DS_Store
