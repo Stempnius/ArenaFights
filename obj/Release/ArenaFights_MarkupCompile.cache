@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-D:\Projekty\Turniej Aplikacja\ArenaFights-repo\obj\Debug\
+D:\Projekty\Turniej Aplikacja\ArenaFights-repo\obj\Release\
 ArenaFights
 none
 false
-DEBUG;TRACE
+TRACE
 D:\Projekty\Turniej Aplikacja\ArenaFights-repo\App.xaml
 102000396088
 
