@@ -1,0 +1,44 @@
+﻿<Window x:Class="ArenaFights.SkillsEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edytor umiejętności" Height="420" Width="520"
+        WindowStartupLocation="CenterOwner"
+        Background="#F3F3F3">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Nazwa -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center">
+            <TextBlock Text="Nazwa:" Margin="0,0,8,0" VerticalAlignment="Center"/>
+            <TextBox Name="NameBox" Width="280" />
+        </StackPanel>
+
+        <!-- Podgląd ikony -->
+        <TextBlock Text="Podgląd ikony (2:1, tło przezroczyste OK)" Grid.Row="2" Margin="0,0,0,6"/>
+        <Border Grid.Row="4" Width="240" Height="120" Background="Transparent" BorderBrush="#CCC" BorderThickness="1" CornerRadius="6">
+            <Image Name="PreviewImage" Stretch="Uniform" />
+        </Border>
+
+        <!-- Przyciski obrazu -->
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Margin="0,12,0,0">
+            <Button Content="Wgraj z pliku" Width="120" Margin="0,0,8,0" Click="UploadFromFile_Click"/>
+            <Button Content="Wklej ze schowka" Width="140" Margin="0,0,8,0" Click="PasteFromClipboard_Click"/>
+            <Button Content="Usuń obraz" Width="110" Click="RemoveImage_Click"/>
+        </StackPanel>
+
+        <!-- OK/Anuluj -->
+        <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="OK" Width="100" Margin="0,0,8,0" Click="Ok_Click"/>
+            <Button Content="Anuluj" Width="100" Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

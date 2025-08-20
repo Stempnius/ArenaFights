@@ -1,0 +1,22 @@
+[
+  {
+    "Nazwa": "City",
+    "ObrazPath": "assets/arenas/253eccd4f10e497ca2641e9e08ce47c0.png",
+    "ObrazPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\arenas\\253eccd4f10e497ca2641e9e08ce47c0.png",
+    "MiniaturaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\arenas\\253eccd4f10e497ca2641e9e08ce47c0.png",
+    "Cechy": [
+      {
+        "Nazwa": "Metalowy",
+        "IkonaPath": "assets/skills/d99f564539f44ff89fb355fbd2f2715e.png",
+        "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\d99f564539f44ff89fb355fbd2f2715e.png"
+      }
+    ]
+  },
+  {
+    "Nazwa": "Apocalypse",
+    "ObrazPath": "assets/arenas/6b0d0c2a431e4e19979d7fb11de4cd80.gif",
+    "ObrazPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\arenas\\6b0d0c2a431e4e19979d7fb11de4cd80.gif",
+    "MiniaturaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\arenas\\6b0d0c2a431e4e19979d7fb11de4cd80.gif",
+    "Cechy": []
+  }
+]

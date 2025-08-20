@@ -1,0 +1,70 @@
+[
+  {
+    "Imie": "World Breaker",
+    "Druzyna": null,
+    "Sila": 10,
+    "Walka": 7,
+    "Energia": 1,
+    "Wytrzymalosc": 10,
+    "Predkosc": 9,
+    "Tony": 999.0,
+    "Elo": 1875.28720607721,
+    "Miejsce": 1,
+    "PortretPath": "Assets/portraits/876be4b6e945464184738add130f4fcd.png",
+    "PortretPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\Assets\\portraits\\876be4b6e945464184738add130f4fcd.png",
+    "PortretL": true,
+    "PortretR": false,
+    "Umiejetnosci": [
+      {
+        "Nazwa": "Regeneracja",
+        "IkonaPath": "assets/skills/6813b63b5ef4462e916b97440d75cc8e.png",
+        "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\6813b63b5ef4462e916b97440d75cc8e.png"
+      }
+    ],
+    "Slabosci": []
+  },
+  {
+    "Imie": "Ud'zal",
+    "Druzyna": null,
+    "Sila": 10,
+    "Walka": 2,
+    "Energia": 10,
+    "Wytrzymalosc": 10,
+    "Predkosc": 9,
+    "Tony": 999.0,
+    "Elo": 1847.58280881202,
+    "Miejsce": 2,
+    "PortretPath": "assets/portraits/b462c08daf9c4e9c812b4b0d92107228.png",
+    "PortretPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\portraits\\b462c08daf9c4e9c812b4b0d92107228.png",
+    "PortretL": true,
+    "PortretR": false,
+    "Umiejetnosci": [
+      {
+        "Nazwa": "Absorbcja",
+        "IkonaPath": "assets/skills/fb2a3716669a41b7a9bcf787466b6c11.png",
+        "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\fb2a3716669a41b7a9bcf787466b6c11.png"
+      },
+      {
+        "Nazwa": "Emisja energii",
+        "IkonaPath": "assets/skills/f0636a0465934a649ccb103313483d67.png",
+        "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\f0636a0465934a649ccb103313483d67.png"
+      },
+      {
+        "Nazwa": "Metalowy",
+        "IkonaPath": "assets/skills/d99f564539f44ff89fb355fbd2f2715e.png",
+        "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\d99f564539f44ff89fb355fbd2f2715e.png"
+      },
+      {
+        "Nazwa": "Robot",
+        "IkonaPath": "assets/skills/8e2e39a49d774429b5769fa385590f45.png",
+        "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\8e2e39a49d774429b5769fa385590f45.png"
+      },
+      {
+        "Nazwa": "Regeneracja",
+        "IkonaPath": "assets/skills/6813b63b5ef4462e916b97440d75cc8e.png",
+        "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\6813b63b5ef4462e916b97440d75cc8e.png"
+      }
+    ],
+    "Slabosci": []
+  }
+]

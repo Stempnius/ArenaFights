@@ -1,0 +1,165 @@
+﻿<Window x:Class="ArenaFights.FighterEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Zawodnik" Height="820" Width="900" WindowStartupLocation="CenterOwner">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Dane + portret -->
+            <Grid Grid.Row="0" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <!-- DRUŻYNA -->
+                        <RowDefinition Height="Auto"/>
+
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Imię -->
+                    <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,4">
+                        <TextBlock Text="Imię:" Width="120" VerticalAlignment="Center"/>
+                        <TextBox Name="NameBox" Width="220"/>
+                    </StackPanel>
+
+                    <!-- DRUŻYNA: pod imieniem -->
+                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,4">
+                        <TextBlock Text="Drużyna:" Width="120" VerticalAlignment="Center"/>
+                        <TextBlock Name="TeamNameText"
+                                   Width="220"
+                                   VerticalAlignment="Center"
+                                   Text="(brak)"
+                                   TextTrimming="CharacterEllipsis"/>
+                        <Button Content="Wybierz…" Width="90" Margin="8,0,0,0" Click="PickTeam_Click"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0,4">
+                        <TextBlock Text="Siła (1..10):" Width="120" VerticalAlignment="Center"/>
+                        <TextBox Name="StrengthBox" Width="60"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="0,4">
+                        <TextBlock Text="Walka (1..10):" Width="120" VerticalAlignment="Center"/>
+                        <TextBox Name="FightBox" Width="60"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="4" Margin="0,4">
+                        <TextBlock Text="Energia (1..10):" Width="120" VerticalAlignment="Center"/>
+                        <TextBox Name="EnergyBox" Width="60"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="5" Margin="0,4">
+                        <TextBlock Text="Wytrzymałość (1..10):" Width="120" VerticalAlignment="Center"/>
+                        <TextBox Name="EnduranceBox" Width="60"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="6" Margin="0,4">
+                        <TextBlock Text="Prędkość (1..10):" Width="120" VerticalAlignment="Center"/>
+                        <TextBox Name="SpeedBox" Width="60"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="7" Margin="0,4">
+                        <TextBlock Text="Tony (0,01..999):" Width="120" VerticalAlignment="Center"/>
+                        <TextBox Name="TonsBox" Width="80"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="8" Margin="0,4">
+                        <TextBlock Text="ELO (0..9999):" Width="120" VerticalAlignment="Center"/>
+                        <TextBox Name="EloBox" Width="80"/>
+                    </StackPanel>
+                </Grid>
+
+                <Separator Grid.Column="1" Margin="20,0"/>
+
+                <StackPanel Grid.Column="2">
+                    <Border Width="300" Height="300" Background="Transparent" CornerRadius="8" Margin="0,0,0,8">
+                        <Image Name="PortraitPreview" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Button Content="Dodaj z pliku" Width="120" Margin="0,0,8,0" Click="PortraitFromFile_Click"/>
+                        <Button Content="Wklej" Width="90" Margin="0,0,8,0" Click="PortraitPaste_Click"/>
+                        <Button Content="Usuń" Width="90" Click="PortraitRemove_Click"/>
+                    </StackPanel>
+                    <TextBlock Foreground="Gray" Text="Dowolny obraz (PNG/JPG). Wyświetlanie w kwadracie; krótsze boki – przezroczyste." Margin="0,6,0,0"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- Umiejętności -->
+            <GroupBox Grid.Row="1" Header="Umiejętności (z katalogu)" Margin="0,0,0,10">
+                <DockPanel>
+                    <Button Content="Dodaj z katalogu" DockPanel.Dock="Top" Width="160" Margin="0,0,0,8"
+                            Click="AddSkillFromCatalog_Click"/>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ItemsControl Name="SkillsItems">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <DockPanel Margin="0,4">
+                                        <Border Width="72" Height="36" Background="Transparent" CornerRadius="6" Margin="0,0,8,0"
+                                                SnapsToDevicePixels="True" ClipToBounds="True">
+                                            <Image Source="{Binding IkonaPathAbsolute}"
+                                                   Stretch="Uniform"
+                                                   RenderOptions.BitmapScalingMode="HighQuality"
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <TextBlock Text="{Binding Nazwa}" VerticalAlignment="Center" Width="200"/>
+                                        <Button Content="Usuń" Width="80" DockPanel.Dock="Right"
+                                                CommandParameter="{Binding}"
+                                                Click="RemoveSkill_Click"/>
+                                    </DockPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </DockPanel>
+            </GroupBox>
+
+            <!-- Słabości -->
+            <GroupBox Grid.Row="2" Header="Słabości (z katalogu)" Margin="0,0,0,10">
+                <DockPanel>
+                    <Button Content="Dodaj z katalogu" DockPanel.Dock="Top" Width="160" Margin="0,0,0,8"
+                            Click="AddWeaknessFromCatalog_Click"/>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ItemsControl Name="WeaknessItems">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <DockPanel Margin="0,4">
+                                        <Border Width="72" Height="36" Background="Transparent" CornerRadius="6" Margin="0,0,8,0"
+                                                BorderBrush="#AAE57373" BorderThickness="1"
+                                                SnapsToDevicePixels="True" ClipToBounds="True">
+                                            <Image Source="{Binding IkonaPathAbsolute}"
+                                                   Stretch="Uniform"
+                                                   RenderOptions.BitmapScalingMode="HighQuality"
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <TextBlock Text="{Binding Nazwa}" VerticalAlignment="Center" Width="200"/>
+                                        <Button Content="Usuń" Width="80" DockPanel.Dock="Right"
+                                                CommandParameter="{Binding}"
+                                                Click="RemoveWeakness_Click"/>
+                                    </DockPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </DockPanel>
+            </GroupBox>
+
+            <!-- OK/Anuluj -->
+            <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="OK" Width="100" Margin="0,0,8,0" Click="Ok_Click"/>
+                <Button Content="Anuluj" Width="100" Click="Cancel_Click"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

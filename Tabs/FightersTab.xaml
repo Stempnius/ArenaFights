@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="ArenaFights.Tabs.FightersTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="Transparent">
+    <Grid Background="Transparent" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Pasek akcji -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,8">
+            <Button Content="Nowy zawodnik" Width="150" Margin="0,0,8,0" Click="BtnNewFighter_Click"/>
+            <Button Content="Edytuj zawodnika" Width="150" Margin="0,0,8,0" Click="BtnEditFighter_Click"/>
+            <CheckBox x:Name="FilterToggle"
+                      Content="Filtry 0/1"
+                      Margin="16,0,0,0"
+                      VerticalAlignment="Center"
+                      Checked="FilterToggle_Checked"
+                      Unchecked="FilterToggle_Unchecked"/>
+        </StackPanel>
+
+        <!-- Tabela -->
+        <DataGrid x:Name="FightersGrid"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  IsReadOnly="True"
+                  Background="#F2F2F2"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="None"
+                  SelectionMode="Single"/>
+    </Grid>
+</UserControl>

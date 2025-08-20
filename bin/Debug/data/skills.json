@@ -1,0 +1,67 @@
+[
+  {
+    "Nazwa": "Absorbcja",
+    "IkonaPath": "assets/skills/fb2a3716669a41b7a9bcf787466b6c11.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\fb2a3716669a41b7a9bcf787466b6c11.png"
+  },
+  {
+    "Nazwa": "Emisja energii",
+    "IkonaPath": "assets/skills/f0636a0465934a649ccb103313483d67.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\f0636a0465934a649ccb103313483d67.png"
+  },
+  {
+    "Nazwa": "Gigant",
+    "IkonaPath": "assets/skills/858f6e7d3a8d45b4b8024578ad5e2870.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\858f6e7d3a8d45b4b8024578ad5e2870.png"
+  },
+  {
+    "Nazwa": "Ki",
+    "IkonaPath": "assets/skills/6b6f390c8fe34448ac17cc6207ae9042.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\6b6f390c8fe34448ac17cc6207ae9042.png"
+  },
+  {
+    "Nazwa": "Laser",
+    "IkonaPath": "assets/skills/2aaf8a49c6334fcfbcc20ceb26d7f228.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\2aaf8a49c6334fcfbcc20ceb26d7f228.png"
+  },
+  {
+    "Nazwa": "Lot",
+    "IkonaPath": "assets/skills/d68c845816f64e608be32451361d2de8.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\d68c845816f64e608be32451361d2de8.png"
+  },
+  {
+    "Nazwa": "Metalowy",
+    "IkonaPath": "assets/skills/d99f564539f44ff89fb355fbd2f2715e.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\d99f564539f44ff89fb355fbd2f2715e.png"
+  },
+  {
+    "Nazwa": "Moc",
+    "IkonaPath": "assets/skills/505e642a3f9e4318b91c28ae2df4b6b7.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\505e642a3f9e4318b91c28ae2df4b6b7.png"
+  },
+  {
+    "Nazwa": "Regeneracja",
+    "IkonaPath": "assets/skills/6813b63b5ef4462e916b97440d75cc8e.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\6813b63b5ef4462e916b97440d75cc8e.png"
+  },
+  {
+    "Nazwa": "Robot",
+    "IkonaPath": "assets/skills/8e2e39a49d774429b5769fa385590f45.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\8e2e39a49d774429b5769fa385590f45.png"
+  },
+  {
+    "Nazwa": "Telekineza",
+    "IkonaPath": "assets/skills/fb9cb5a15d3949ce887a08930a774492.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\fb9cb5a15d3949ce887a08930a774492.png"
+  },
+  {
+    "Nazwa": "Telepatia",
+    "IkonaPath": "assets/skills/5ef3e2c557ed4a2d89ca07bb0ef9e831.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\5ef3e2c557ed4a2d89ca07bb0ef9e831.png"
+  },
+  {
+    "Nazwa": "Teleport",
+    "IkonaPath": "assets/skills/816ae18d5f5e4368a583b1475f4aa3ba.png",
+    "IkonaPathAbsolute": "D:\\Projekty\\Turniej Aplikacja\\ArenaFights\\bin\\Debug\\assets\\skills\\816ae18d5f5e4368a583b1475f4aa3ba.png"
+  }
+]

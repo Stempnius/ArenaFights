@@ -1,0 +1,146 @@
+﻿<UserControl x:Class="ArenaFights.Editors.FighterEditorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="900"
+             Background="Transparent">
+    <Grid Margin="10" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Pasek tytułu -->
+        <TextBlock x:Name="HeaderText"
+                   FontSize="20" FontWeight="SemiBold" Margin="0,0,0,8"/>
+
+        <!-- Treść edytora -->
+        <Grid Grid.Row="1" Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Formularz -->
+            <StackPanel Grid.Column="0" Margin="0,0,12,0" Background="Transparent">
+                <WrapPanel Margin="0,0,0,6">
+                    <TextBlock Text="Imię:" Width="120" VerticalAlignment="Center"/>
+                    <TextBox x:Name="NameBox" Width="240"/>
+                </WrapPanel>
+
+                <WrapPanel Margin="0,0,0,6">
+                    <TextBlock Text="ELO (do 10 miejsc):" Width="120" VerticalAlignment="Center"/>
+                    <TextBox x:Name="EloBox" Width="120"/>
+                </WrapPanel>
+
+                <WrapPanel Margin="0,0,0,6">
+                    <TextBlock Text="Siła (1-10):" Width="120" VerticalAlignment="Center"/>
+                    <TextBox x:Name="StrengthBox" Width="60"/>
+                    <TextBlock Text="  Walka (1-10):" Margin="12,0,0,0" VerticalAlignment="Center"/>
+                    <TextBox x:Name="FightBox" Width="60"/>
+                    <TextBlock Text="  Energia (1-10):" Margin="12,0,0,0" VerticalAlignment="Center"/>
+                    <TextBox x:Name="EnergyBox" Width="60"/>
+                </WrapPanel>
+
+                <WrapPanel Margin="0,0,0,6">
+                    <TextBlock Text="Wytrzymałość (1-10):" Width="120" VerticalAlignment="Center"/>
+                    <TextBox x:Name="EnduranceBox" Width="60"/>
+                    <TextBlock Text="  Prędkość (1-10):" Margin="12,0,0,0" VerticalAlignment="Center"/>
+                    <TextBox x:Name="SpeedBox" Width="60"/>
+                    <TextBlock Text="  Tony (0,01-999):" Margin="12,0,0,0" VerticalAlignment="Center"/>
+                    <TextBox x:Name="TonsBox" Width="80"/>
+                </WrapPanel>
+
+                <!-- Umiejętności -->
+                <GroupBox Header="Umiejętności" Margin="0,8,0,0" Background="Transparent">
+                    <DockPanel Background="Transparent">
+                        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,6" Background="Transparent">
+                            <Button Content="Dodaj z katalogu" Width="150" Margin="0,0,6,0" Click="AddSkillFromCatalog_Click"/>
+                            <Button Content="Usuń zaznaczoną" Width="150" Click="RemoveSkill_Click"/>
+                        </StackPanel>
+                        <ItemsControl x:Name="SkillsItems" Background="Transparent">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <DockPanel Margin="2" Background="Transparent">
+                                        <Border Width="24" Height="24" Background="Transparent" Margin="0,0,4,0"
+                                                SnapsToDevicePixels="True" ClipToBounds="True">
+                                            <Image Source="{Binding IkonaPathAbsolute}"
+                                                   Stretch="Uniform"
+                                                   RenderOptions.BitmapScalingMode="HighQuality"/>
+                                        </Border>
+                                        <TextBlock Text="{Binding Nazwa}" VerticalAlignment="Center"/>
+                                    </DockPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </DockPanel>
+                </GroupBox>
+
+                <!-- Słabości -->
+                <GroupBox Header="Słabości" Margin="0,8,0,0" Background="Transparent">
+                    <DockPanel Background="Transparent">
+                        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,6" Background="Transparent">
+                            <Button Content="Dodaj z katalogu" Width="150" Margin="0,0,6,0" Click="AddWeaknessFromCatalog_Click"/>
+                            <Button Content="Usuń zaznaczoną" Width="150" Click="RemoveWeakness_Click"/>
+                        </StackPanel>
+                        <ItemsControl x:Name="WeaknessItems" Background="Transparent">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <DockPanel Margin="2" Background="Transparent">
+                                        <Border Width="24" Height="24" Background="Transparent" Margin="0,0,4,0"
+                                                BorderBrush="#AAE57373" BorderThickness="1" CornerRadius="3"
+                                                SnapsToDevicePixels="True" ClipToBounds="True">
+                                            <Image Source="{Binding IkonaPathAbsolute}"
+                                                   Stretch="Uniform"
+                                                   RenderOptions.BitmapScalingMode="HighQuality"/>
+                                        </Border>
+                                        <TextBlock Text="{Binding Nazwa}" VerticalAlignment="Center"/>
+                                    </DockPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </DockPanel>
+                </GroupBox>
+            </StackPanel>
+
+            <!-- Portret -->
+            <StackPanel Grid.Column="1" Background="Transparent">
+                <Border Width="240" Height="240" Background="Transparent" BorderBrush="#DDD" BorderThickness="1" CornerRadius="8"
+                        HorizontalAlignment="Left" SnapsToDevicePixels="True" ClipToBounds="True">
+                    <Image x:Name="PortraitPreview" Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality"/>
+                </Border>
+
+                <StackPanel Orientation="Horizontal" Margin="0,8,0,0" Background="Transparent">
+                    <Button Content="Z pliku" Width="100" Margin="0,0,6,0" Click="PortraitFromFile_Click"/>
+                    <Button Content="Wklej" Width="100" Margin="0,0,6,0" Click="PortraitPaste_Click"/>
+                    <Button Content="Usuń" Width="80" Click="PortraitRemove_Click"/>
+                </StackPanel>
+
+                <!-- Flagi L/R -->
+                <StackPanel Orientation="Horizontal" Margin="0,8,0,0" Background="Transparent">
+                    <CheckBox x:Name="FlagL" Content="L" Margin="0,0,12,0"/>
+                    <CheckBox x:Name="FlagR" Content="R"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <!-- Pasek akcji -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,8,0,0" Background="Transparent">
+            <Button Content="Zapisz" Width="120" Margin="0,0,6,0" Click="Ok_Click"/>
+            <Button Content="Zamknij kartę" Width="140" Click="CloseTab_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
